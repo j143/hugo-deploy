@@ -63,6 +63,21 @@ jobs:
         TZ: Asia/Shanghai
 ```
 
+## Troubleshooting
+
+**Error message**
+```sh
+# github.com:22 SSH-2.0-babeld-517b8896
+Cloning into 'site'...
+Load key "/root/.ssh/id_rsa": invalid format
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+```
+
+```sh
+ssh-keygen -t rsa -b 4096 -m pem -C "username@users.noreply.github.com"
+```
+
 ## Additional Notes
 
 - With Arch Linux, hugo-deploy will always use the latest extended version of Hugo, [check it here](https://www.archlinux.org/packages/community/x86_64/hugo/).
